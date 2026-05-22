@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs-pinned.url = "github:NixOS/nixpkgs/1dfd0f069d2d348d732f81c813d842e15aa20da5";
+    nixpkgs-pinned.url = "github:NixOS/nixpkgs/f9b86f7794dec7ee309a48546c1bc5e0165009bf";
     gccpin.url = "github:NixOS/nixpkgs/118485230c02d13f62133bce43177ffd49495694";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
   };
