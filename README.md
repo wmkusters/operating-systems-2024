@@ -1,3 +1,16 @@
+# MIT 6.1810 Operating Systems Self-Study
+This repo contains my work against the MIT Operating System Engineering course. 
+The class website can be found [at CSAIL's webiste](https://pdos.csail.mit.edu/6.1810/2023/index.html). 
+Click the `Labs` dropdown to access [the tools page](https://pdos.csail.mit.edu/6.1810/2023/tools.html), which has 
+some tool requirements and installation instructions for the class. 
+The [first lab](https://pdos.csail.mit.edu/6.1810/2023/labs/util.html) has some
+additional setup instructions. 
+## Course Structure
+The course constitutes of adding incremental changes to [xv6](https://pdos.csail.mit.edu/6.828/2023/xv6/book-riscv-rev3.pdf), a toy operating system used to teach classes like this. These changes are bundled into "labs". Each lab is contained in a different branch of the repo, such as `util`, `syscall`, etc.
+
+The original README is copied in full here:
+
+```
 xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix
 Version 6 (v6).  xv6 loosely follows the structure and style of v6,
 but is implemented for a modern RISC-V multiprocessor using ANSI C.
@@ -47,3 +60,5 @@ You will need a RISC-V "newlib" tool chain from
 https://github.com/riscv/riscv-gnu-toolchain, and qemu compiled for
 riscv64-softmmu.  Once they are installed, and in your shell
 search path, you can run "make qemu".
+```
+
