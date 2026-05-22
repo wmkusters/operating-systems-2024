@@ -6,9 +6,11 @@ some tool requirements and installation instructions for the class.
 The [first lab](https://pdos.csail.mit.edu/6.1810/2023/labs/util.html) has some
 additional setup instructions. 
 ## Course Structure
-The course constitutes of adding incremental changes to [xv6](https://pdos.csail.mit.edu/6.828/2023/xv6/book-riscv-rev3.pdf), a toy operating system used to teach classes like this. These changes are bundled into "labs". Each lab is contained in a different branch of the repo, such as `util`, `syscall`, etc.
+The course consists of adding incremental changes to [xv6](https://pdos.csail.mit.edu/6.828/2023/xv6/book-riscv-rev3.pdf), a toy operating system used to teach classes like this. These changes are bundled into "labs". Each lab is contained in a different branch of the repo, such as `util`, `syscall`, etc.
 
 The original README is copied in full here:
+<details>
+<summary>Original readme</summary>
 
 ```
 xv6 is a re-implementation of Dennis Ritchie's and Ken Thompson's Unix
@@ -62,3 +64,19 @@ riscv64-softmmu.  Once they are installed, and in your shell
 search path, you can run "make qemu".
 ```
 
+</details>
+
+## Setup 
+I've configured a Nix flake for easier setup, which will put the necessary GNU GCC riscv64 compiler and QEMU on your path. To get started, make sure you have `nix` installed, and then run `nix develop` in the project directory.
+
+Make sure `gdb` is able to connect to the running QEMU instance. I had to add the following to my `~/.gdbinit` to get it to work with `gdb` in the Nix store:
+
+```gdbinit
+set auto-load safe-path /nix/store
+add-auto-load-safe-path /home/billk/projects/operating-systems-2024/.gdbinit
+```
+
+Once that's setup, you can run `make grade` to grade your labs for completion.
+
+### Notable changes from upstream
+- The grader was having issues with my setup; it expects GDB to be running on `localhost` for grading any `xv6` changes. I had to replace `localhost` -> `127.0.0.1` to fix some DNS issues.
