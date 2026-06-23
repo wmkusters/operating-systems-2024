@@ -27,7 +27,7 @@
         pkgs.gnumake
         pkgs.python311
 
-        pkgs.bear
+        pkgs.compiledb
         pkgs.clang-tools
       ];
       buildInputs = [];

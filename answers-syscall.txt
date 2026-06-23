@@ -1,0 +1,6 @@
+usertrap
+value is 0x7; value represents the syscall number, SYS_exec
+user mode
+lw; zero
+page-fault exception is raised; nothing is mapped for 0. yes; exception code is 13, which matches.
+initcode; pid=1
