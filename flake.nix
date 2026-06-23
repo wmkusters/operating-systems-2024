@@ -26,6 +26,9 @@
         qemuPinPkgs.gdb
         pkgs.gnumake
         pkgs.python311
+
+        pkgs.bear
+        pkgs.clang-tools
       ];
       buildInputs = [];
     };
